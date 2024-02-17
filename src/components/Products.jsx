@@ -15,13 +15,13 @@ const Products = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
   useEffect(() => {
     const getProducts = async () => {
       try {
         const res = await axios.get(
-          cat
-            ? `https://e-com-api-inip.onrender.com/api/products?category=${cat}`
-            : "https://e-com-api-inip.onrender.com/api/products"
+          cat ? `${BASE_URL}/products?category=${cat}` : `${BASE_URL}/products`
         );
         setProducts(res.data);
       } catch (err) {
