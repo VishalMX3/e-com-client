@@ -36,22 +36,22 @@ export const popularProducts = [
 export const sliderItems = [
   {
     id: 1,
-    img: "https://i.ibb.co/cXFnLLV/3.png",
+    img: "https://firebasestorage.googleapis.com/v0/b/e-shop-74124.appspot.com/o/pexels-photo-12883669-removebg-preview-removebg-preview.png?alt=media&token=ad7418d5-a091-4e86-8ba4-12fb56b34e0d",
     title: "SUMMER SALE",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "f5fafd",
   },
   {
     id: 2,
-    img: "https://i.ibb.co/DG69bQ4/2.png",
-    title: "AUTUMN COLLECTION",
+    img: "https://firebasestorage.googleapis.com/v0/b/e-shop-74124.appspot.com/o/kid.png?alt=media&token=f24a6890-f983-4fd0-ae39-b131347b111a",
+    title: "JOYFUL COLLECTION",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fcf1ed",
   },
   {
     id: 3,
-    img: "https://i.ibb.co/cXFnLLV/3.png",
-    title: "LOUNGEWEAR LOVE",
+    img: "https://firebasestorage.googleapis.com/v0/b/e-shop-74124.appspot.com/o/men.png?alt=media&token=3cb29879-f228-4002-92a9-f8c81ad97536",
+    title: "ELEGANCE PERSONIFIED",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fbf0f4",
   },
