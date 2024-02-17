@@ -102,6 +102,7 @@ const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <Input
+            type="password"
             placeholder="password"
             onChange={(e) => setPassword(e.target.value)}
           />
