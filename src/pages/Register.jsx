@@ -62,10 +62,12 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  let isFetching = false;
 
   const handleClick = async (e) => {
     e.preventDefault();
-    console.log("register clicked");
+    isFetching = true;
+
     try {
       const res = await axios.post(
         `${process.env.REACT_APP_BASE_URL}/auth/register`,
@@ -76,7 +78,9 @@ const Register = () => {
           img: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/3c9f4a40760693.578c9a4699778.gif",
         }
       );
-      console.log(res.data);
+      alert("Registration Successful! You can now login");
+
+      isFetching = false;
       navigate("/");
     } catch (err) {
       console.log(err);
@@ -106,7 +110,9 @@ const Register = () => {
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
-          <Button onClick={handleClick}>CREATE</Button>
+          <Button onClick={handleClick} disabled={isFetching}>
+            CREATE
+          </Button>
         </Form>
       </Wrapper>
     </Container>
