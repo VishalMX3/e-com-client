@@ -81,7 +81,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>VISH.</Logo>
+          <Logo>VISHAL-E-SHOP</Logo>
         </Center>
         <Right>
           <Link to="/register">
