@@ -84,6 +84,9 @@ const Navbar = () => {
           <Logo>VISHAL-E-SHOP</Logo>
         </Center>
         <Right>
+          <Link to="/">
+            <MenuItem>HOME</MenuItem>
+          </Link>
           <Link to="/register">
             <MenuItem>REGISTER</MenuItem>
           </Link>
