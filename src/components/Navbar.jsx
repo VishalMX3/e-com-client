@@ -58,6 +58,7 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding-right: 2px;
   ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 
