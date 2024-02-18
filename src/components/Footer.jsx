@@ -87,11 +87,12 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>VISHAL-E-SHOP</Logo>
+        <Logo>E-SHOP</Logo>
         <Desc>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
+          We have three categories here - Men, Women and Kids. Product
+          categories - tshirt, trousers, shoes. Products in a specific category
+          can be filtered according to size, color. They can also be sorted by
+          price.
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
