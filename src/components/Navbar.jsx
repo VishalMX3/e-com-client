@@ -41,7 +41,7 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
-  ${mobile({ width: "50px" })}
+  ${mobile({ width: "1px" })}
 `;
 
 const Center = styled.div`
@@ -81,12 +81,11 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>E-SHOP</Logo>
+          <Link to="/">
+            <Logo>E-SHOP</Logo>
+          </Link>
         </Center>
         <Right>
-          <Link to="/">
-            <MenuItem>HOME</MenuItem>
-          </Link>
           <Link to="/register">
             <MenuItem>REGISTER</MenuItem>
           </Link>
