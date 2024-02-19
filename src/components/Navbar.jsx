@@ -69,6 +69,14 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
+const AdminLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  margin-left: 25px;
+  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
+`;
+
 const Navbar = () => {
   const quantity = useSelector((state) => state.cart.quantity);
   return (
@@ -87,11 +95,14 @@ const Navbar = () => {
           </Link>
         </Center>
         <Right>
+          <AdminLink href="https://e-com-admin-5i8r.onrender.com/">
+            ADMIN
+          </AdminLink>
           <Link to="/register">
-            <MenuItem>REGISTER</MenuItem>
+            <MenuItem>SIGNUP</MenuItem>
           </Link>
           <Link to="/login  ">
-            <MenuItem>SIGN IN</MenuItem>
+            <MenuItem>LOGIN</MenuItem>
           </Link>
           <Link to="/cart">
             <MenuItem>
