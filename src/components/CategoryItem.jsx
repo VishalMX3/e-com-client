@@ -7,6 +7,10 @@ const Container = styled.div`
   margin: 3px;
   height: 70vh;
   position: relative;
+  transition: all 0.5s ease;
+  &:hover {
+    transform: scale(0.9);
+  }
 `;
 
 const Image = styled.img`
