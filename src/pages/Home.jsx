@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navbar from "../components/Navbar";
 import Products from "../components/Products";
 import Announcement from "../components/Announcement";
@@ -8,13 +8,16 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 
 const Home = () => {
+  const productsRef = useRef(null);
   return (
     <div>
       <Announcement />
       <Navbar />
-      <Slider />
+      <Slider productsRef={productsRef} />
       <Categories />
-      <Products />
+      <div ref={productsRef}>
+        <Products />
+      </div>
       <Newsletter />
       <Footer />
     </div>

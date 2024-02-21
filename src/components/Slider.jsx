@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
 import { mobile } from "../responsive";
+import { useRef } from "react";
 
 const Container = styled.div`
   width: 100%;
@@ -79,7 +80,11 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Slider = () => {
+const Slider = ({ productsRef }) => {
+  const scrollToProducts = () => {
+    productsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
     if (direction === "left") {
@@ -111,7 +116,7 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>SHOW NOW</Button>
+              <Button onClick={scrollToProducts}>SHOP NOW</Button>
             </InfoContainer>
           </Slide>
         ))}
