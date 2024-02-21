@@ -11,9 +11,21 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
+const LoadingMessage = styled.p`
+  height: 20vh;
+  width: 100vw;
+  background-color: #e1dede;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+`;
+
 const Products = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const BASE_URL = process.env.REACT_APP_BASE_URL;
 
@@ -24,6 +36,7 @@ const Products = ({ cat, filters, sort }) => {
           cat ? `${BASE_URL}/products?category=${cat}` : `${BASE_URL}/products`
         );
         setProducts(res.data);
+        setLoading(false);
       } catch (err) {
         console.log(err);
       }
@@ -62,11 +75,18 @@ const Products = ({ cat, filters, sort }) => {
 
   return (
     <Container>
-      {cat
-        ? filteredProducts.map((item) => <Product item={item} key={item._id} />)
-        : products
-            .slice(0, 5)
-            .map((item) => <Product item={item} key={item._id} />)}
+      {loading ? ( // Show loading message if products are still loading
+        <LoadingMessage>
+          Fetching products from database... Please wait
+        </LoadingMessage>
+      ) : // Render products when they are loaded
+      cat ? (
+        filteredProducts.map((item) => <Product item={item} key={item._id} />)
+      ) : (
+        products
+          .slice(0, 5)
+          .map((item) => <Product item={item} key={item._id} />)
+      )}
     </Container>
   );
 };
