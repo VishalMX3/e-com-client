@@ -1,11 +1,27 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Success = () => {
   const location = useLocation();
   console.log(location);
+  const navigate = useNavigate();
 
-  return <div>Success</div>;
+  const handleClick = () => {
+    navigate("/");
+  };
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <h1>Success</h1>
+      <button onClick={handleClick}>Continue Shopping</button>
+    </div>
+  );
 };
 
 export default Success;
